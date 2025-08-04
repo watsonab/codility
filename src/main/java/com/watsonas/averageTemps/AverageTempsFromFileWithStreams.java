@@ -3,7 +3,7 @@ package com.watsonas;
 /**
  * Hello world!
  */
-public class App {
+public class BillionRowReader {
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
