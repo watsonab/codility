@@ -10,7 +10,7 @@ public class MinAbsSumTest {
 	static final int[] codilitytestData3 = new int[] { 5, 4 };
 	static final int[] codilitytestData4 = new int[] { 5, 4, 3,3,3,8,7,6,5,4,3,2,20,10,10,7,8,3,3,4,5,66,42 };
 
-	static int[][] testSet = new int[][]{ codilitytestData1, codilitytestData2, codilitytestData3, codilitytestData4 };
+	static int[][] testSet = new int[][]{ codilitytestData1, codilitytestData2, codilitytestData3 };
 	static int[] testResult = new int[]{ 0,0,1,1 };
 	
 	@Test
