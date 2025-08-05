@@ -47,7 +47,7 @@ public class MinAbsSumArray {
 			}
 		}
 		
-		System.out.println("Minsum hit is " + hit + " of "  + minSum + " using " + Arrays.asList(allPossibilities[hit]) + " on " + Arrays.asList(A)  );
+		// System.out.println("Minsum hit is " + hit + " of "  + minSum + " using " + Arrays.toString( allPossibilities[hit] ) + " on " + Arrays.toString( A )  );
 		
 		return minSum;
 	}

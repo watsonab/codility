@@ -2,11 +2,9 @@ package com.watsonas.codility;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class MinAbsSumTree {
-	
 	
 	public static int solution( int[] A ) {
 		
@@ -64,32 +62,6 @@ public class MinAbsSumTree {
 			addValue( node.plus, value, finalLeaves );
 			addValue( node.minus, value, finalLeaves );
 		}
-	}
-	
-	
-	
-	private static AtomicInteger getMinValue( CountingNode node, int value, AtomicInteger minValue) {
-		if ( node.isLeaf() ) {
-			//System.out.println("Found leaf node with count of " + node.count + " from value " + node.value + " node " + node );
-			return new AtomicInteger( node.count );
-
-		} else {
-			// recursive get
-			if ( !node.isRoot() ) {
-				
-				
-				minValue.set( Math.min( Math.abs( getMinValue( node.plus, value, minValue ).get() ), minValue.get() ) );
-				minValue.set( Math.min( Math.abs( getMinValue( node.minus, value, minValue ).get() ), minValue.get() ) );
-				//System.out.println("Found non leaf node " + node + " set minValue to " + minValue );
-
-			} else	{
-				//System.out.println("Found root leaf node " + node );
-				getMinValue( node.plus, value, minValue );
-				getMinValue( node.minus, value, minValue);
-			}
-		}
-		
-		return minValue;
 	}
 	
 	static class CountingNode {

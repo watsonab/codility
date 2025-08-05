@@ -18,7 +18,6 @@ public class MinAbsSumArrayEfficient {
 		 *          x
 		 */
 		int minSum = -1;
-		int hit = -1;
 
 		for( int x = 0; x < possibles; x++ ) {
 			
@@ -28,22 +27,18 @@ public class MinAbsSumArrayEfficient {
 			for( int i = 0; ( i < A.length &&  ( mask > 0 )); i++ ) {
 				// if bit 0 of x is 0, set -1 else set 1
 				multipliers[i] = ( mask & 0b0001 );
-				//System.out.println("Multiplier " + i + " is " + multipliers[i] + " x is "  + x + " mask is " + mask );
 				mask = mask >> 1;
 				
 			}
 		
 			int sum = apply( A, multipliers );
-				// System.out.println("Sum " + y + " is " + sum );
 				if ( minSum == -1 || sum < minSum ) {
 					minSum = sum;
-					hit = x;
-				//	System.out.println("Minsum " + y + " is " + sum );
 			}	
 			
 		}
 		
-		System.out.println("Minsum hit is " + hit + " of "  + minSum  );
+		//  System.out.println("Minsum hit is " + hit + " of "  + minSum  );
 		
 		return minSum;
 	}

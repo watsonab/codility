@@ -45,7 +45,7 @@ public class MinAbsSumFork {
 		CustomRecursiveTask crt = new CustomRecursiveTask( A, allPossibilities );
 		Integer minSum = crt.compute();
 		
-		System.out.println("Minsum " + minSum );
+		// System.out.println("Minsum " + minSum );
 		
 		return minSum;
 	}

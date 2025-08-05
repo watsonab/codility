@@ -34,7 +34,7 @@ public class MinAbsSumForkJoin {
 		CustomRecursiveTask crt = new CustomRecursiveTask( A, multiplierNumbers );
 		Integer minSum = crt.compute();
 		
-		System.out.println("Minsum " + minSum );
+		// System.out.println("Minsum " + minSum );
 		
 		return minSum;
 	}
