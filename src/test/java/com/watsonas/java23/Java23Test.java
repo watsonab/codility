@@ -84,28 +84,6 @@ public class Java23Test {
 		}
 	}
 	
-
-	@Test
-	public void streamTests() {
-		List<String> fruits = Arrays.asList("apple", "banana", "orange", "grape", "kiwi");
-		// Using Stream API to filter and transform elements
-		List<String> result = fruits.stream()
-				.filter(fruit -> fruit.length() > 5)
-				.map(String::toUpperCase)
-				.collect(Collectors.toList());
-		
-		System.out.println(result);
-    	
-    	String[] words = {"apple", "banana", "cherry", "date", "elderberry"};
-    	  
-        // Using explicit lambda expression for sorting
-        Arrays.sort(words, (a, b) -> a.compareToIgnoreCase(b));
-        // Using method reference to sort the array
-        Arrays.sort(words, String::compareToIgnoreCase);
-        
-        System.out.println(Arrays.asList(words));
-	}
-	
 	@Test
 	public void recordTests() {
 		// bit like Lombok immutable data?
